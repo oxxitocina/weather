@@ -27,7 +27,7 @@ body, ul    {
     box-sizing: border-box;
     width: 30px;
     height: 30px;
-    background: url(img/search.png);
+    background: url(../img/search.png);
     background-size: cover;
     margin: 0 auto;
     border: none;
@@ -75,7 +75,7 @@ body, ul    {
 .heart-empty {
     width: 22px;
     height: 22px;
-    background: url(img/Shape.png);
+    background: url(../img/Shape.png);
     background-size: cover;
 }
 
@@ -83,7 +83,7 @@ body, ul    {
 .fill     {
     width: 22px;
     height: 22px;
-    background: url(img/Shape_filled.png);
+    background: url(../img/Shape_filled.png);
     background-size: cover;
     box-sizing: border-box;
     border: none;

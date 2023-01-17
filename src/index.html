@@ -7,34 +7,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <title>Document</title>
 </head>
 <body>
     <main>
         <div class="container">
-            <div class="search">
-                <input class="search-input" type="text">
-                <button class="search-btn"></button>
-            </div>
+            <form class="search">
+                <input id="city-name" class="search-input" type="text">
+                <button type="submit" class="search-btn"></button>
+            </form>
             <div class="grid-container">
+
                 <div class="main-tab">
+                    <div class="now-tab">
+                        <div class="temperature">
+                            <p>14</p>
+                            <div class="mask">
+                                <img src="img/mask.png" alt="mask">
+                            </div>
+                        </div>
+                        <div class="cloud">
+                            <img src="img/icons8-cloud-96 1.png" alt="cloud">
+                        </div>
+                        <div class="city">
+                            Aktobe
+                        </div>
+                        <button id="heart" class="heart-empty"></button>
+                    </div>
 
+                    <div class="details-tab hider">
+                        <div class="details">
+                            Aktobe
+                        </div>
+                        <div class="details-container">
+                            <ul class="details-list">
+                                <li class="details_temperature">Temperature: 14<sup>°</sup> </li>
+                                <li class="details_feels_like" >Feels like: 10<sup>°</sup></li>
+                                <li class="details_weather" >Weather: Clouds</li>
+                                <li class="details_sunrise" >Sunrise: 03:21</li>
+                                <li class="details_sunset" >Sunset: 18:54</li>
+                            </ul>
+                        </div>
+                    </div>
 
-
-
-
-
-
-
-
-
-
-                    <div class="forecast-tab">
+                    <div class="forecast-tab hider">
                         <div class="details">
                             <p>Aktobe</p>
                         </div>
-                        <div class="forecast-container hider">
+                        <div class="forecast-container">
                             <div class="forecast n1">
                                 <div class="date-forecast">
                                     <div class="date">17 May</div>
@@ -85,11 +106,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navigator">
-                        <button id="now">Now</button>
-                        <button id="details">Details</button>
-                        <button id="forecast">Forecast</button>
-                    </div>
+
+                <div class="navigator">
+                    <button id="now">Now</button>
+                    <button id="details">Details</button>
+                    <button id="forecast">Forecast</button>
+                </div>
+
                 </div>
                 <div class="location">
                     <div class="added-locations">
@@ -97,12 +120,12 @@
                     </div>
                     <div class="locations-container">
                         <ul class="locations-list">
-                            <li>Amur</li>
-                            <li>Samara</li>
+                            <!-- <li>Amur Oblast</li>
+                            <li>Samara Oblast</li>
                             <li>Bali</li>
                             <li>Dane</li>
                             <li>Kilo</li>
-                            <li>Nur-Sultan</li>
+                            <li>Nur-Sultan</li> -->
                         </ul>
                     </div>
                 </div>
@@ -110,6 +133,7 @@
         </div>
     </main>
 
-    <script src="main.js"></script>
+    <!-- <script type="module" src="index.js"></script> -->
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
