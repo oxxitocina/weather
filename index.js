@@ -1,19 +1,5 @@
 import { format, compareAsc } from 'date-fns'
 
-console.log(format(new Date(2014, 1, 11), 'MM/dd/yyyy'));
-//=> '02/11/2014'
-
-const dates = [
-  new Date(1995, 6, 2),
-  new Date(1987, 1, 11),
-  new Date(1989, 6, 10),
-]
-dates.sort(compareAsc)
-//=> [
-//   Wed Feb 11 1987 00:00:00,
-//   Mon Jul 10 1989 00:00:00,
-//   Sun Jul 02 1995 00:00:00
-// ]
 
 
 
@@ -115,7 +101,7 @@ localStorage.setItem('set_cities', JSON.stringify(Array.from(set_cities)));
 localStorage.setItem('currentCity', cityGlobal);
 let currentCity;
 // currentCity = JSON.parse(localStorage.currentCity);
-currentCity = JSON.parse(getCookie('currentCity'));
+currentCity = (JSON.parse(getCookie('currentCity')) ?? 'Kokshetau');
 document.getElementById('city-name').value = currentCity;
 sendForm();
 
@@ -168,8 +154,8 @@ async function sendForm(city_added_locations) {
         // })
     let information = await response.json();    
         
-            let temperature = information.main.temp;
-            let cityNameAPI = information.name;
+            let temperature = information?.main?.temp ?? 'Unknown temperature';
+            let cityNameAPI = information?.name ?? 'Unknown city';
             cityGlobal = information.name;
             localStorage.setItem('currentCity', JSON.stringify(cityGlobal));
             document.cookie = encodeURIComponent('currentCity') + '=' + encodeURIComponent(JSON.stringify(cityGlobal));
