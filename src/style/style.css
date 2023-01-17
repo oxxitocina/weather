@@ -144,7 +144,7 @@ body, ul    {
 .added-locations    {
     box-sizing: border-box;
     height: 68px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     text-align: left;
 }
 
